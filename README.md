@@ -1,6 +1,6 @@
 # dcs
 
-[![CI](https://github.com/tommy2lion/dcs/actions/workflows/ci.yml/badge.svg)](https://github.com/tommy2lion/dcs/actions/workflows/ci.yml)
+[![CI](https://github.com/tommy2lion/dcs/actions/workflows/ci.yml/badge.svg)](https://github.com/tommy2lion/dcs/actions/workflows/ci.yml) [![download dcs v1.0.0](https://img.shields.io/badge/download-v1.0.0-blue)](https://github.com/tommy2lion/dcs/releases/download/v1.0.0/dcs-v1.0.0-windows-x86_64.zip)
 
 **DCS (Digital Circuit Simulation)** lets you draw logic circuits on a screen and watch them run.
 
