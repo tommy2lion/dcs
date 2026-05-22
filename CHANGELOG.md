@@ -12,9 +12,7 @@ Section conventions:
 
 ---
 
-## [1.0.0] - TBD
-
-<!-- Date is set at tag time; see docs/step3-implementation-plan.md Stage 13. -->
+## [1.0.0] - 2026-05-22
 
 The first numbered release: teacher-demo ready. Combines the Step 2
 supplement refinement work (R-* items) with the Step 3 v1.0.0
