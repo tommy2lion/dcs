@@ -1,0 +1,19 @@
+# Easter egg — SR latch (RS flip-flop). The classic two-NOR
+# cross-coupled bistable.
+#
+# DCS is a combinational simulator today; the parser is strictly
+# acyclic (every gate's inputs must already be defined wires).
+# Sequential primitives — and with them, real flip-flops — are
+# tracked as R-9 and planned for v1.3.0.
+#
+# Workaround for the Easter egg: the would-be feedback signals are
+# surfaced as external inputs `Q_fb` and `Qbar_fb`. Treat them as
+# the latch's current state and watch the NORs compute the next
+# state. In a real SR latch, Q_fb would be wired to Q and Qbar_fb
+# to Qbar. The two NOR gates are the actual structure.
+
+inputs: S, R, Q_fb, Qbar_fb
+outputs: Q, Qbar
+
+Q    = nor(R, Qbar_fb)
+Qbar = nor(S, Q_fb)

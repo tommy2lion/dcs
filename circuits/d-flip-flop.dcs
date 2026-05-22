@@ -1,0 +1,18 @@
+# Easter egg — level-sensitive D latch (the heart of a D flip-flop).
+# When CLK=1, Q follows D; when CLK=0, Q holds its last value.
+# Internally it's an SR latch with the CLK-gated S/R derived from D.
+#
+# Same constraint as rs-flip-flop.dcs: DCS doesn't yet evaluate
+# feedback, so the would-be cross-coupling is surfaced via the
+# external inputs `Q_fb` and `Qbar_fb`. In a real D latch they would
+# be wired internally from Q and Qbar. Sequential primitives are
+# R-9, planned for v1.3.0.
+
+inputs: D, CLK, Q_fb, Qbar_fb
+outputs: Q, Qbar
+
+not_D = not(D)
+S     = and(D, CLK)
+R     = and(not_D, CLK)
+Q     = nor(R, Qbar_fb)
+Qbar  = nor(S, Q_fb)
