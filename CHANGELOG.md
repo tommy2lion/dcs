@@ -137,10 +137,12 @@ primitive gates.
 
 ### Known limitations (intentionally deferred)
 
-- `circuits/adder2bit.dcs`, `adder4bit.dcs`, `adder8bit.dcs` are NOT
-  in the no-crossings fixture set — they expose multi-obstacle
-  routing cases the dynamic finder doesn't yet resolve. Tracked for
-  post v1.0.0-rc2.
+- `circuits/adder2bit.dcs` (the nested two-bit adder) is NOT in the
+  no-crossings fixture set — it exposes multi-obstacle routing cases
+  the dynamic finder doesn't yet resolve. The curated 4-bit and 8-bit
+  adders (`07-four-bit-adder.dcs`, `08-eight-bit-adder.dcs`) and the
+  8-bit multiplier (`09-eight-bit-multiplier.dcs`) are also outside
+  the no-crossings fixture today. Tracked for post v1.0.0-rc2.
 - Multi-delete still emits N snapshots (one per deleted node); a
   single undo step covering the whole multi-delete is deferred.
 - Layout and routing are still single hard-coded implementations

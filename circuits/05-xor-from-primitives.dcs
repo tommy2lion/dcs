@@ -1,0 +1,16 @@
+# Demo 05 — XOR built from AND/OR/NOT primitives. v1.0.0 also ships
+# XOR as a one-button primitive (try the XOR toolbar button), but
+# this demo shows the textbook construction:
+#   a XOR b = (a AND NOT b) OR (NOT a AND b)
+# Useful for teaching how composite logic emerges from the three
+# basic gates — and as a comparison point against the single-gate
+# `xor()` primitive.
+
+inputs: a, b
+outputs: y
+
+n_a = not(a)
+n_b = not(b)
+t1  = and(a, n_b)
+t2  = and(n_a, b)
+y   = or(t1, t2)

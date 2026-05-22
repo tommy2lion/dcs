@@ -1,0 +1,7 @@
+# Demo 02 — NOT gate (inverter). One input, one output: the output is
+# the opposite of the input. Toggling the input flips the output.
+
+inputs: a
+outputs: y
+
+y = not(a)

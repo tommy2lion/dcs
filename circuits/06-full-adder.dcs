@@ -1,0 +1,24 @@
+# Demo 06 — 1-bit full adder. Adds three single-bit inputs (`a`, `b`,
+# `cin`) and produces a `sum` and a `cout`. The building block of every
+# multi-bit adder in the gallery: 07 (4-bit) and 08 (8-bit) chain
+# eight of these together via the carry line.
+#
+# Uses the XOR primitive (new in v1.0.0). Truth table:
+#   a b cin -> sum cout
+#   0 0 0      0   0
+#   0 0 1      1   0
+#   0 1 0      1   0
+#   0 1 1      0   1
+#   1 0 0      1   0
+#   1 0 1      0   1
+#   1 1 0      0   1
+#   1 1 1      1   1
+
+inputs: a, b, cin
+outputs: sum, cout
+
+ab    = xor(a, b)
+sum   = xor(ab, cin)
+c1    = and(a, b)
+c2    = and(ab, cin)
+cout  = or(c1, c2)

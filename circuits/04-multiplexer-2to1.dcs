@@ -1,0 +1,13 @@
+# Demo 04 — 2-to-1 multiplexer (selector). When `sel` is 0 the output
+# follows `a`; when `sel` is 1 the output follows `b`. The classic
+# "if/else" of digital logic, built from AND/OR/NOT. Try toggling
+# `sel` while `a` and `b` are set differently — watch the output
+# switch between them.
+
+inputs: a, b, sel
+outputs: y
+
+n_sel  = not(sel)
+a_path = and(a, n_sel)
+b_path = and(b, sel)
+y      = or(a_path, b_path)

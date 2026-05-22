@@ -1,3 +1,8 @@
+# Demo 07 — 4-bit ripple-carry adder. Adds A[3..0] + B[3..0] + Cin and
+# produces S[3..0] + Cout. Built from four full-adder cells using only
+# AND/OR/NOT primitives. Each bit's carry-out feeds the next bit's
+# carry-in — the "ripple". 9 inputs / 5 outputs.
+
 inputs: A0, A1, A2, A3, B0, B1, B2, B3, Cin
 outputs: S0, S1, S2, S3, Cout
 

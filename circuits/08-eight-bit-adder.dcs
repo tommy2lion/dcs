@@ -1,3 +1,10 @@
+# Demo 08 — 8-bit ripple-carry adder. Adds A[7..0] + B[7..0] and
+# produces S[7..0] + Cout. 16 inputs / 9 outputs. Bit 0 is a half-adder
+# (no Cin); bits 1..7 are full-adders ripple-carried from the previous
+# bit. The largest 1-D demo before the multiplier — sits at the old
+# DOMAIN_MAX_IO = 16 input cap, which v1.0.0 bumped to 32 to make
+# headroom for the 16-bit-output multiplier next door.
+
 inputs: A0, A1, A2, A3, A4, A5, A6, A7, B0, B1, B2, B3, B4, B5, B6, B7
 outputs: S0, S1, S2, S3, S4, S5, S6, S7, Cout
 

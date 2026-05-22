@@ -218,7 +218,7 @@ static void print_format_help(FILE *out) {
 "\n"
 "  y = and(a, b)\n"
 "\n"
-"  # CLI:  dcs_cli circuits/and_gate.dcs --input \"a=1,b=1\"\n"
+"  # CLI:  dcs_cli circuits/01-and-gate.dcs --input \"a=1,b=1\"\n"
 "  # ->   a=1 b=1 -> y=1\n"
 "\n"
 "WORKED EXAMPLE 2 — Half adder\n"

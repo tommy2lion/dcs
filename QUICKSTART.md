@@ -9,8 +9,8 @@ If you haven't built DCS yet, see [INSTALL.md](./INSTALL.md) first.
    ```
    ./dcs_gui.exe
    ```
-2. **Open a demo.** *File → Open* → pick `circuits/and_gate.dcs`. You
-   should see two `INPUT` boxes on the left, an AND gate in the
+2. **Open a demo.** *File → Open* → pick `circuits/01-and-gate.dcs`.
+   You should see two `INPUT` boxes on the left, an AND gate in the
    middle, and one `OUTPUT` box on the right, all wired up.
 3. **Toggle inputs.** Click each `INPUT` in the side panel to flip
    it between 0 and 1. The output updates as soon as both inputs go
@@ -28,13 +28,20 @@ If you haven't built DCS yet, see [INSTALL.md](./INSTALL.md) first.
 
 ## Demos to explore next
 
-| File | What it shows |
-|---|---|
-| `circuits/and_gate.dcs` | The simplest possible circuit. |
-| `circuits/or_gate.dcs`, `nor_gate.dcs`, `xor_gate.dcs` | Each primitive in isolation. |
-| `circuits/half_adder.dcs` | Two-bit addition (sum + carry). |
-| `circuits/adder2bit.dcs` | Two-bit adder built from primitives. |
-| `circuits/adder8bit.dcs` | The largest packaged demo. |
+The numbered files in `circuits/` form a curated tour from one gate
+to a full 8-bit array multiplier. See
+[`circuits/README.md`](./circuits/README.md) for the full index.
+Suggested order:
+
+| # | File | What it shows |
+|---|---|---|
+| 01 | `01-and-gate.dcs` | The simplest possible circuit. |
+| 03 | `03-half-adder.dcs` | Two-bit addition (sum + carry). |
+| 04 | `04-multiplexer-2to1.dcs` | The digital "if/else". |
+| 05 | `05-xor-from-primitives.dcs` | XOR built from AND/OR/NOT. |
+| 06 | `06-full-adder.dcs` | Building block of every multi-bit adder. |
+| 08 | `08-eight-bit-adder.dcs` | The largest 1-D demo. |
+| 09 | `09-eight-bit-multiplier.dcs` | The largest demo overall. |
 
 ## Handy keys & shortcuts
 
@@ -52,7 +59,7 @@ If you haven't built DCS yet, see [INSTALL.md](./INSTALL.md) first.
 For automated runs (regression scripts, CI, AI-assisted authoring):
 
 ```
-./dcs_cli.exe circuits/half_adder.dcs
+./dcs_cli.exe circuits/03-half-adder.dcs
 ```
 
 Sweeps every input combination and prints the truth table. Run

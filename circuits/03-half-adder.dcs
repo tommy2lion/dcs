@@ -1,0 +1,15 @@
+# Demo 03 — Half adder. Adds two single-bit inputs `a` and `b` and
+# produces a `sum` and a `carry`. Built from AND/OR/NOT primitives.
+# Truth table:  a b -> sum carry
+#               0 0    0   0
+#               0 1    1   0
+#               1 0    1   0
+#               1 1    0   1
+
+inputs: a, b
+outputs: sum, carry
+
+carry   = and(a, b)
+a_or_b  = or(a, b)
+n_carry = not(carry)
+sum     = and(a_or_b, n_carry)

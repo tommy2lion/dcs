@@ -1,0 +1,14 @@
+# Demo 01 — AND gate. The simplest two-input primitive: the output is 1
+# only when both inputs are 1. Toggle each input in the side panel and
+# watch the output.
+
+inputs: a, b
+outputs: y
+
+y = and(a, b)
+
+# @layout
+# @  y = 280, 280
+# @  __input:a = 100, 220
+# @  __input:b = 100, 340
+# @  __output:y = 460, 280

@@ -1627,12 +1627,12 @@ int main(void) {
            surface multi-obstacle cases the finder doesn't yet resolve. */
         const char *fixtures[] = {
             "circuits/xor_gate.dcs",     /* the regression that drove this */
-            "circuits/and_gate.dcs",
+            "circuits/01-and-gate.dcs",
             "circuits/or_gate.dcs",
-            "circuits/not_gate.dcs",
+            "circuits/02-not-gate.dcs",
             "circuits/nand_gate.dcs",
             "circuits/nor_gate.dcs",
-            "circuits/half_adder.dcs",
+            "circuits/03-half-adder.dcs",
             NULL,
         };
         for (int fi = 0; fixtures[fi]; fi++) {
