@@ -20,9 +20,22 @@ roadmap (v1.1.0).
    - `dcs_gui.exe` — the GUI editor (raylib window).
    - `dcs_cli.exe` — the headless simulator (prints truth tables).
 
-Run `./build.sh -h` for debug / clean / test modes. The Makefile is
-the underlying build system; `make test` runs the full suite (931
-tests as of v1.0.0).
+Run `./build.sh -h` for debug / clean / test / package modes. The
+Makefile is the underlying build system; `make test` runs the full
+suite (931 tests as of v1.0.0).
+
+## Packaging a portable release
+
+```
+./build.sh package
+```
+
+builds the release binaries and zips them together with the two
+required raylib DLLs (`libraylib.dll`, `glfw3.dll`), the user-facing
+docs, and the curated `circuits/` gallery into
+`dcs-v<version>-windows-x86_64.zip`. The zip is self-contained: any
+Windows machine can extract it and run `dcs_gui.exe` without
+installing MSYS2 or raylib.
 
 ## Optional — personal build salt
 

@@ -25,4 +25,10 @@ src/build_info.c
 # build was release or debug, so a mode switch can force -B.
 .build_mode
 
+# Portable release output from `./build.sh package`. The staging dir
+# is removed at the end of packaging; the zip stays in the repo root
+# for upload to the GitHub Release.
+/dcs-v*-windows-x86_64/
+/dcs-v*-windows-x86_64.zip
+
 docs/*
