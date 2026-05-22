@@ -275,4 +275,3 @@ after the snapshot**.
 [1.0.0]: https://github.com/tommy2lion/dcs/releases/tag/v1.0.0
 [0.3.0]: https://github.com/tommy2lion/dcs/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/tommy2lion/dcs/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/tommy2lion/dcs/releases/tag/v0.1.0
