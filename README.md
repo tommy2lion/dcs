@@ -6,3 +6,13 @@ You drop gates onto a canvas — AND, OR, NOT, NAND, NOR, XOR, XNOR — wire the
 
 ---
 ![dcs](./dcs.png)
+
+## Getting started
+
+- **[INSTALL.md](./INSTALL.md)** — build DCS on Windows / MSYS2.
+- **[QUICKSTART.md](./QUICKSTART.md)** — draw and simulate your first circuit in five minutes.
+
+## More
+
+- **[CHANGELOG.md](./CHANGELOG.md)** — what's in each release.
+- **[history.md](./history.md)** — the full design trail, prototype through v1.0.0.
